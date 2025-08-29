@@ -156,6 +156,7 @@
   /* Hero sections */
   .hero-gradient {
     background: var(--gradient-hero);
+    opacity: 0.4;
   }
 
   .hero-pattern {

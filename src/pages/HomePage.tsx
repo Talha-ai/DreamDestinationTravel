@@ -1,17 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import StatsCounter from '@/components/StatsCounter';
-import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-import FeaturedPackages from '@/components/FeaturedPackages';
-import ServicesSection from '@/components/ServicesSection';
-import CustomerLogos from '@/components/CustomerLogos';
-import heroImage from '@/assets/hero-travel.jpg';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import StatsCounter from "@/components/StatsCounter";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import FeaturedPackages from "@/components/FeaturedPackages";
+import ServicesSection from "@/components/ServicesSection";
+import CustomerLogos from "@/components/CustomerLogos";
+import heroImage from "@/assets/hero-travel.jpg";
+import herovideo from "../assets/homevideo.mp4";
 
 const HomePage = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/1234567890?text=Hello! I\'m interested in planning my next adventure with Dream Destination Travels.', '_blank');
+    window.open(
+      "https://wa.me/1234567890?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
+      "_blank"
+    );
   };
 
   return (
@@ -20,11 +24,19 @@ const HomePage = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
+          {/* <img
             src={heroImage}
             alt="Dream Destination Travels"
             className="w-full h-full object-cover"
-          />
+          /> */}
+          <video
+            src={herovideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          ></video>
           <div className="absolute inset-0 hero-gradient" />
           <div className="absolute inset-0 hero-pattern" />
         </div>
@@ -53,8 +65,9 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Embark on extraordinary journeys with our expertly curated travel experiences. 
-              From exotic international destinations to hidden local gems, we make your travel dreams come true.
+              Embark on extraordinary journeys with our expertly curated travel
+              experiences. From exotic international destinations to hidden
+              local gems, we make your travel dreams come true.
             </motion.p>
 
             <motion.div
@@ -83,7 +96,11 @@ const HomePage = () => {
                 variant="glass"
                 size="lg"
                 className="group"
-                onClick={() => document.getElementById('featured-packages')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("featured-packages")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Our Story
@@ -169,8 +186,9 @@ const HomePage = () => {
               Ready to Create Unforgettable Memories?
             </h2>
             <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-              Let our travel experts design the perfect journey for you. 
-              Contact us today for a free consultation and start planning your dream vacation.
+              Let our travel experts design the perfect journey for you. Contact
+              us today for a free consultation and start planning your dream
+              vacation.
             </p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -185,14 +203,8 @@ const HomePage = () => {
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
-                variant="glass"
-                size="lg"
-                asChild
-              >
-                <a href="/services">
-                  Browse All Packages
-                </a>
+              <Button variant="glass" size="lg" asChild>
+                <a href="/services">Browse All Packages</a>
               </Button>
             </motion.div>
           </motion.div>
