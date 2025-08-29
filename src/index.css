@@ -2,41 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Dream Destination Travels Design System - Beautiful travel-themed colors and effects */
 
 @layer base {
   :root {
+    /* Travel-themed color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 12% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 12% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 12% 16%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Ocean blue primary colors */
+    --primary: 200 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 200 100% 60%;
+    --primary-dark: 200 100% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sunset secondary colors */
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 25 95% 65%;
 
+    /* Neutral tones */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 180 100% 25%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 200 100% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Travel-specific design tokens */
+    --gradient-ocean: linear-gradient(135deg, hsl(200 100% 40%), hsl(180 100% 25%));
+    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 53%), hsl(15 88% 65%));
+    --gradient-sky: linear-gradient(180deg, hsl(200 100% 85%), hsl(220 60% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 100% 40% / 0.9), hsl(180 100% 25% / 0.9));
+    
+    /* Shadows */
+    --shadow-travel: 0 20px 40px -12px hsl(200 100% 40% / 0.3);
+    --shadow-floating: 0 10px 30px -5px hsl(200 100% 40% / 0.4);
+    --shadow-glow: 0 0 40px hsl(200 100% 60% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +76,41 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 210 20% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 210 20% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 210 20% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 200 100% 60%;
+    --primary-foreground: 210 20% 8%;
+    --primary-light: 200 100% 70%;
+    --primary-dark: 200 100% 40%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 95% 60%;
+    --secondary-foreground: 210 20% 8%;
+    --secondary-light: 25 95% 70%;
 
-    --muted: 217.2 32.6% 17.5%;
+    --muted: 210 20% 15%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 180 100% 35%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 200 100% 60%;
+    
+    --gradient-ocean: linear-gradient(135deg, hsl(200 100% 60%), hsl(180 100% 35%));
+    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 60%), hsl(15 88% 70%));
+    --gradient-sky: linear-gradient(180deg, hsl(200 100% 25%), hsl(220 60% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 100% 60% / 0.9), hsl(180 100% 35% / 0.9));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +128,152 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Custom cursor */
+  .cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: var(--transition-smooth);
+  }
+
+  /* Hero sections */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .hero-pattern {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.15) 1px, transparent 0);
+    background-size: 50px 50px;
+  }
+
+  /* Floating elements */
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .floating-b2b {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite 1.5s;
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    transition: var(--transition-smooth);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-travel);
+  }
+
+  /* Button variants */
+  .btn-travel {
+    background: var(--gradient-ocean);
+    color: hsl(var(--primary-foreground));
+    border: none;
+    box-shadow: var(--shadow-floating);
+    transition: var(--transition-bounce);
+  }
+
+  .btn-travel:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-sunset {
+    background: var(--gradient-sunset);
+    color: hsl(var(--secondary-foreground));
+    border: none;
+    box-shadow: var(--shadow-floating);
+    transition: var(--transition-bounce);
+  }
+
+  .btn-sunset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px hsl(var(--secondary) / 0.5);
+  }
+
+  /* Text gradients */
+  .text-gradient-ocean {
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sunset {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Loading animation */
+  .loading-spinner {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Section dividers */
+  .section-divider {
+    background: var(--gradient-sky);
+    height: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    animation: shimmer 2s ease-in-out infinite;
   }
 }
