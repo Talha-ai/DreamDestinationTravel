@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
 import CustomCursor from "./components/CustomCursor";
-import LoadingScreen from "./components/LoadingScreen";
+// import LoadingScreen from "./components/LoadingScreen";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -48,9 +48,9 @@ const App = () => {
           <div className="relative">
             <CustomCursor />
             <AnimatePresence mode="wait">
-              {isLoading ? (
+              {/* {isLoading ? (
                 <LoadingScreen key="loading" />
-              ) : (
+              ) : ( */}
                 <>
                   <Navbar />
                   <main>
@@ -71,7 +71,7 @@ const App = () => {
                   <Footer />
                   <FloatingButtons />
                 </>
-              )}
+              {/* )} */}
             </AnimatePresence>
           </div>
         </BrowserRouter>
