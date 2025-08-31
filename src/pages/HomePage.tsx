@@ -31,12 +31,12 @@ const HomePage = () => {
           /> */}
           <video
             src={herovideo}
-            autoPlay
-            loop
-            muted
+            autoPlay={true}
+            loop={true}
+            muted={true}
             playsInline
             className="w-full h-full object-cover"
-          ></video>
+          />
           <div className="absolute inset-0 hero-gradient" />
           <div className="absolute inset-0 hero-pattern" />
         </div>
