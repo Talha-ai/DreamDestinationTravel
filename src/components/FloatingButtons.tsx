@@ -5,7 +5,10 @@ import { Button } from '@/components/ui/button';
 
 const FloatingButtons = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/1234567890?text=Hello! I\'m interested in your travel services.', '_blank');
+    window.open(
+      "https://wa.me/1234567890?text=Hello! I'm interested in your travel services.",
+      '_blank'
+    );
   };
 
   const handleB2BClick = () => {
@@ -19,7 +22,7 @@ const FloatingButtons = () => {
         className="floating-whatsapp"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 2, duration: 0.5, type: "spring" }}
+        transition={{ delay: 2, duration: 0.5, type: 'spring' }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -33,7 +36,7 @@ const FloatingButtons = () => {
       </motion.div>
 
       {/* B2B Button */}
-      <motion.div
+      {/* <motion.div
         className="floating-b2b"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -48,7 +51,7 @@ const FloatingButtons = () => {
         >
           <Briefcase className="w-6 h-6" />
         </Button>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };

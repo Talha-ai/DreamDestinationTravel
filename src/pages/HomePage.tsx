@@ -1,20 +1,20 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import StatsCounter from "@/components/StatsCounter";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import FeaturedPackages from "@/components/FeaturedPackages";
-import ServicesSection from "@/components/ServicesSection";
-import CustomerLogos from "@/components/CustomerLogos";
-import heroImage from "@/assets/hero-travel.jpg";
-import herovideo from "../assets/homevideo.mp4";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Play } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import StatsCounter from '@/components/StatsCounter';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import FeaturedPackages from '@/components/FeaturedPackages';
+import ServicesSection from '@/components/ServicesSection';
+import CustomerLogos from '@/components/CustomerLogos';
+import heroImage from '@/assets/hero-travel.jpg';
+import herovideo from '../assets/homevideo.mp4';
 
 const HomePage = () => {
   const handleWhatsAppClick = () => {
     window.open(
       "https://wa.me/1234567890?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
-      "_blank"
+      '_blank'
     );
   };
 
@@ -86,7 +86,7 @@ const HomePage = () => {
                 <motion.div
                   className="ml-2"
                   whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 >
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
@@ -95,14 +95,14 @@ const HomePage = () => {
               <Button
                 variant="glass"
                 size="lg"
-                className="group"
+                className="group text-white"
                 onClick={() =>
                   document
-                    .getElementById("featured-packages")
-                    ?.scrollIntoView({ behavior: "smooth" })
+                    .getElementById('featured-packages')
+                    ?.scrollIntoView({ behavior: 'smooth' })
                 }
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2 " />
                 Watch Our Story
               </Button>
             </motion.div>
@@ -118,7 +118,7 @@ const HomePage = () => {
             transition={{
               duration: 6,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: 'easeInOut',
             }}
           />
           <motion.div
@@ -130,13 +130,13 @@ const HomePage = () => {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: 'easeInOut',
             }}
           />
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -153,7 +153,7 @@ const HomePage = () => {
               transition={{ duration: 2, repeat: Infinity }}
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* Stats Counter */}
@@ -204,7 +204,9 @@ const HomePage = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="glass" size="lg" asChild>
-                <a href="/services">Browse All Packages</a>
+                <a href="/services" className="text-white">
+                  Browse All Packages
+                </a>
               </Button>
             </motion.div>
           </motion.div>

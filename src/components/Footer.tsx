@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Twitter, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+  Phone,
+  Mail,
+  MapPin,
+} from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
@@ -49,8 +57,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Your trusted travel partner for creating unforgettable journeys and 
-              extraordinary experiences around the world.
+              Your trusted travel partner for creating unforgettable journeys
+              and extraordinary experiences around the world.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -145,7 +153,9 @@ const Footer = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Phone className="w-5 h-5 text-secondary" />
-                <span className="text-primary-foreground/80">+1 (555) 123-4567</span>
+                <span className="text-primary-foreground/80">
+                  +1 (555) 123-4567
+                </span>
               </motion.div>
               <motion.div
                 className="flex items-center space-x-3"
@@ -153,7 +163,9 @@ const Footer = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Mail className="w-5 h-5 text-secondary" />
-                <span className="text-primary-foreground/80">info@dreamdestination.com</span>
+                <span className="text-primary-foreground/80">
+                  info@dreamdestination.com
+                </span>
               </motion.div>
               <motion.div
                 className="flex items-start space-x-3"
@@ -177,7 +189,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-primary-foreground/60">
-            © 2024 Dream Destination Travels. All rights reserved. | Designed with ❤️ for travelers
+            © 2024 Dream Destination Travels. All rights reserved.
           </p>
         </motion.div>
       </div>
