@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 const CustomerLogos = () => {
   // Sample customer/partner logos (using placeholder company names)
   const logos = [
-    { name: "Global Corp", logo: "🏢" },
-    { name: "TechStart", logo: "💻" },
-    { name: "EduWorld", logo: "🎓" },
-    { name: "Adventure Co", logo: "🌟" },
-    { name: "Business Plus", logo: "📊" },
-    { name: "Creative Studios", logo: "🎨" },
-    { name: "Future Works", logo: "🚀" },
-    { name: "Innovation Hub", logo: "💡" },
+    { name: 'Silver Coin', logo: '🏢' },
+    { name: 'SBI Employees', logo: '💻' },
+    { name: 'Shree guruji', logo: '🎓' },
+    // { name: 'Adventure Co', logo: '🌟' },
+    // { name: 'Business Plus', logo: '📊' },
+    // { name: 'Creative Studios', logo: '🎨' },
+    // { name: 'Future Works', logo: '🚀' },
+    // { name: 'Innovation Hub', logo: '💡' },
   ];
 
   return (
@@ -28,7 +28,8 @@ const CustomerLogos = () => {
             Trusted by Leading Organizations
           </h3>
           <p className="text-muted-foreground">
-            Join thousands of satisfied customers who trust us with their travel needs
+            Join thousands of satisfied customers who trust us with their travel
+            needs
           </p>
         </motion.div>
 
@@ -41,7 +42,7 @@ const CustomerLogos = () => {
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: "linear",
+              ease: 'linear',
             }}
           >
             {[...logos, ...logos].map((company, index) => (
@@ -70,7 +71,7 @@ const CustomerLogos = () => {
           viewport={{ once: true }}
         >
           <p className="text-sm text-muted-foreground">
-            Want to become our partner? 
+            Want to become our partner?
             <motion.a
               href="/b2b"
               className="ml-2 text-primary hover:text-secondary transition-colors duration-300 font-medium"
