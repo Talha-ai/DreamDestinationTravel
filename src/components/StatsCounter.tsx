@@ -14,9 +14,9 @@ const StatsCounter = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const stats: StatItem[] = [
-    { value: 1500, label: 'Happy Clients', suffix: '+' },
-    { value: 50, label: 'Countries Covered', suffix: '+' },
-    { value: 200, label: 'Tour Packages', suffix: '+' },
+    { value: 7500, label: 'Happy Clients', suffix: '+' },
+    { value: 30, label: 'Countries Covered', suffix: '+' },
+    { value: 500, label: 'Tour Packages', suffix: '+' },
     { value: 15, label: 'Years Experience', suffix: '+' },
   ];
 
@@ -26,7 +26,13 @@ const StatsCounter = () => {
     }
   }, [isInView, hasAnimated]);
 
-  const AnimatedNumber = ({ value, suffix = '' }: { value: number; suffix?: string }) => {
+  const AnimatedNumber = ({
+    value,
+    suffix = '',
+  }: {
+    value: number;
+    suffix?: string;
+  }) => {
     const [displayValue, setDisplayValue] = useState(0);
 
     useEffect(() => {
@@ -52,13 +58,14 @@ const StatsCounter = () => {
 
     return (
       <span className="text-gradient-ocean">
-        {displayValue.toLocaleString()}{suffix}
+        {displayValue.toLocaleString()}
+        {suffix}
       </span>
     );
   };
 
   return (
-    <section ref={ref} className="py-16 bg-gradient-sky">
+    <section ref={ref} className=" py-16 bg-gradient-sky">
       <div className="container mx-auto px-4">
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -77,7 +84,7 @@ const StatsCounter = () => {
               <motion.div
                 className="text-4xl md:text-5xl font-bold mb-2"
                 whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
               >
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </motion.div>

@@ -9,51 +9,63 @@ const AboutPage = () => {
   const values = [
     {
       icon: Heart,
-      title: "Passion for Travel",
-      description: "We live and breathe travel, bringing genuine enthusiasm to every journey we plan."
+      title: 'Passion for Travel',
+      description:
+        'We live and breathe travel, bringing genuine enthusiasm to every journey we plan.',
     },
     {
       icon: Shield,
-      title: "Trust & Reliability",
-      description: "Your safety and satisfaction are our top priorities. We're here for you 24/7."
+      title: 'Trust & Reliability',
+      description:
+        "Your safety and satisfaction are our top priorities. We're here for you 24/7.",
     },
     {
       icon: Star,
-      title: "Excellence in Service",
-      description: "We go above and beyond to deliver exceptional experiences that exceed expectations."
+      title: 'Excellence in Service',
+      description:
+        'We go above and beyond to deliver exceptional experiences that exceed expectations.',
     },
     {
       icon: Globe,
-      title: "Global Expertise",
-      description: "With partners worldwide, we offer insider knowledge and authentic local experiences."
-    }
+      title: 'Global Expertise',
+      description:
+        'With partners worldwide, we offer insider knowledge and authentic local experiences.',
+    },
   ];
 
   const team = [
     {
-      name: "Sarah Mitchell",
-      role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face",
-      description: "With 15+ years in the travel industry, Sarah founded Dream Destination to make travel accessible and unforgettable for everyone."
+      name: 'Sarah Mitchell',
+      role: 'Founder & CEO',
+      image:
+        'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face',
+      description:
+        'With 15+ years in the travel industry, Sarah founded Dream Destination to make travel accessible and unforgettable for everyone.',
     },
     {
-      name: "Michael Rodriguez",
-      role: "Head of Operations",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      description: "Michael ensures every trip runs smoothly with his expertise in logistics and his passion for customer service."
+      name: 'Michael Rodriguez',
+      role: 'Head of Operations',
+      image:
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face',
+      description:
+        'Michael ensures every trip runs smoothly with his expertise in logistics and his passion for customer service.',
     },
     {
-      name: "Emily Chen",
-      role: "Travel Specialist",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-      description: "Emily crafts personalized itineraries with her deep knowledge of Asian cultures and destinations."
+      name: 'Emily Chen',
+      role: 'Travel Specialist',
+      image:
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
+      description:
+        'Emily crafts personalized itineraries with her deep knowledge of Asian cultures and destinations.',
     },
     {
-      name: "David Thompson",
-      role: "Adventure Guide",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      description: "David leads our adventure tours with his extensive experience in outdoor activities and safety protocols."
-    }
+      name: 'David Thompson',
+      role: 'Adventure Guide',
+      image:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
+      description:
+        'David leads our adventure tours with his extensive experience in outdoor activities and safety protocols.',
+    },
   ];
 
   return (
@@ -79,8 +91,9 @@ const AboutPage = () => {
               About <span className="text-gradient-sunset">Our Story</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-primary-foreground/90">
-              Passionate about creating extraordinary travel experiences that inspire, 
-              educate, and connect people with the world's most amazing destinations.
+              Passionate about creating extraordinary travel experiences that
+              inspire, educate, and connect people with the world's most amazing
+              destinations.
             </p>
           </motion.div>
         </div>
@@ -101,20 +114,26 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2009, Dream Destination Travels began with a simple belief: 
-                  that travel has the power to transform lives, broaden perspectives, and 
-                  create lasting memories that enrich our understanding of the world.
+                  Founded in 2010, Dream Destination Travels is a leading travel
+                  management company based in Bhopal, India. With a dedicated
+                  team of experienced professionals, we specialize in
+                  tailor-made domestic and international tour packages designed
+                  to deliver quality, flexibility, and memorable experiences.
                 </p>
                 <p>
-                  What started as a small family business has grown into a trusted travel 
-                  partner for thousands of adventurers, families, students, and corporate 
-                  clients. Our success stems from our unwavering commitment to personalized 
-                  service and authentic travel experiences.
+                  We operate exclusively on a B2B model, partnering with travel
+                  agents under a white-label approach to ensure their guests
+                  feel supported throughout their journey. With operational
+                  offices in Siliguri, Port Blair, and Guwahati (soon expanding
+                  to Cochin and Bhutan), we provide strong on-ground
+                  infrastructure, seamless accommodations, transport, and
+                  personalized care.
                 </p>
                 <p>
-                  Today, we're proud to be recognized as one of the leading travel agencies, 
-                  with a team of passionate travel experts who have explored every corner of 
-                  the globe to bring you insider knowledge and unforgettable journeys.
+                  Our motto, “Quality for the Discerning Traveler,” reflects our
+                  commitment to safety, reliability, and innovation. At Dream
+                  Destination Travels, we don’t just plan trips — we create
+                  journeys that inspire and delight.
                 </p>
               </div>
             </motion.div>
@@ -130,7 +149,7 @@ const AboutPage = () => {
                 <div className="bg-gradient-ocean p-6 rounded-lg text-primary-foreground text-center">
                   <Award className="w-8 h-8 mx-auto mb-2" />
                   <h3 className="font-bold text-lg">Award Winning</h3>
-                  <p className="text-sm">Best Travel Agency 2023</p>
+                  <p className="text-sm">Awards if any</p>
                 </div>
                 <div className="bg-gradient-sunset p-6 rounded-lg text-secondary-foreground text-center">
                   <Users className="w-8 h-8 mx-auto mb-2" />
@@ -142,12 +161,12 @@ const AboutPage = () => {
                 <div className="bg-accent p-6 rounded-lg text-accent-foreground text-center">
                   <Globe className="w-8 h-8 mx-auto mb-2" />
                   <h3 className="font-bold text-lg">Global Reach</h3>
-                  <p className="text-sm">50+ Countries Covered</p>
+                  <p className="text-sm">30+ Countries Covered</p>
                 </div>
                 <div className="bg-primary p-6 rounded-lg text-primary-foreground text-center">
                   <Heart className="w-8 h-8 mx-auto mb-2" />
                   <h3 className="font-bold text-lg">Happy Clients</h3>
-                  <p className="text-sm">1500+ Satisfied Travelers</p>
+                  <p className="text-sm">7500+ Satisfied Travelers</p>
                 </div>
               </div>
             </motion.div>
@@ -169,7 +188,8 @@ const AboutPage = () => {
               Our <span className="text-gradient-sunset">Values</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide everything we do and shape every journey we create.
+              The principles that guide everything we do and shape every journey
+              we create.
             </p>
           </motion.div>
 
@@ -214,7 +234,8 @@ const AboutPage = () => {
               Meet Our <span className="text-gradient-ocean">Team</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Passionate travel experts dedicated to making your journey extraordinary.
+              Passionate travel experts dedicated to making your journey
+              extraordinary.
             </p>
           </motion.div>
 

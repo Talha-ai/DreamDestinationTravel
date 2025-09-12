@@ -24,7 +24,7 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Reviews', path: '/reviews' },
-    { name: 'B2B', path: '/b2b' },
+    // { name: 'B2B', path: '/b2b' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-ocean"
                     layoutId="activeLink"
                     initial={false}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
               </Link>

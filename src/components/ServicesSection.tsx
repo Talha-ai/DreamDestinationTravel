@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Plane, 
-  MapPin, 
-  GraduationCap, 
-  Briefcase, 
-  Camera, 
+import {
+  Plane,
+  MapPin,
+  GraduationCap,
+  Briefcase,
+  Camera,
   Shield,
   Users,
-  Star
+  Star,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -26,68 +26,76 @@ const ServicesSection = () => {
   const services: Service[] = [
     {
       id: 1,
-      title: "International Tours",
-      description: "Explore the world with our carefully curated international travel packages to exotic destinations.",
+      title: 'International Tours',
+      description:
+        'Explore the world with our carefully curated international travel packages to exotic destinations.',
       icon: Plane,
-      link: "/services/international",
-      color: "text-blue-500"
+      link: '/services/international',
+      color: 'text-blue-500',
     },
     {
       id: 2,
-      title: "Domestic Tours",
-      description: "Discover the hidden gems of your own country with our local expertise and insider knowledge.",
+      title: 'Domestic Tours',
+      description:
+        'Discover the hidden gems of your own country with our local expertise and insider knowledge.',
       icon: MapPin,
-      link: "/services/domestic",
-      color: "text-green-500"
+      link: '/services/domestic',
+      color: 'text-green-500',
     },
     {
       id: 3,
-      title: "Educational Tours",
-      description: "Enriching educational experiences that combine learning with adventure for students and groups.",
+      title: 'Educational Tours',
+      description:
+        'Enriching educational experiences that combine learning with adventure for students and groups.',
       icon: GraduationCap,
-      link: "/services/educational",
-      color: "text-purple-500"
+      link: '/services/educational',
+      color: 'text-purple-500',
     },
     {
       id: 4,
-      title: "MICE Tours",
-      description: "Professional corporate travel solutions for meetings, incentives, conferences, and events.",
+      title: 'MICE Tours',
+      description:
+        'Professional corporate travel solutions for meetings, incentives, conferences, and events.',
       icon: Briefcase,
-      link: "/services/mice",
-      color: "text-orange-500"
+      link: '/services/mice',
+      color: 'text-orange-500',
     },
     {
       id: 5,
-      title: "Photography Tours",
-      description: "Capture stunning moments with expert-guided photography tours to picturesque locations.",
+      title: 'Destination Weddings',
+      description:
+        'Plan and celebrate your dream wedding at stunning destinations with expert coordination and services.',
       icon: Camera,
-      link: "/services",
-      color: "text-pink-500"
+      link: '/services',
+      color: 'text-pink-500',
     },
     {
       id: 6,
-      title: "Travel Insurance",
-      description: "Comprehensive travel insurance coverage to ensure your peace of mind during your journeys.",
+      title: 'Travel Insurance',
+      description:
+        'Comprehensive travel insurance coverage to ensure your peace of mind during your journeys.',
       icon: Shield,
-      link: "/services",
-      color: "text-red-500"
+      link: '/services',
+      color: 'text-red-500',
     },
     {
       id: 7,
-      title: "Group Tours",
-      description: "Specially designed group packages for families, friends, and organizations with custom itineraries.",
+      title: 'Group Tours',
+      description:
+        'Specially designed group packages for families, friends, and organizations with custom itineraries.',
       icon: Users,
-      link: "/services",
-      color: "text-teal-500"
+      link: '/services',
+      color: 'text-teal-500',
     },
     {
       id: 8,
-      title: "Luxury Experiences",
-      description: "Premium travel experiences with luxury accommodations, exclusive access, and personalized service.",
+      title: 'FAM Tours Experience',
+      description:
+        'Special familiarization tours designed for industry professionals to explore destinations and services firsthand.',
       icon: Star,
-      link: "/services",
-      color: "text-yellow-500"
-    }
+      link: '/services',
+      color: 'text-yellow-500',
+    },
   ];
 
   return (
@@ -104,8 +112,9 @@ const ServicesSection = () => {
             Our <span className="text-gradient-ocean">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From international adventures to domestic discoveries, we offer comprehensive 
-            travel services tailored to create your perfect journey.
+            From international adventures to domestic discoveries, we offer
+            comprehensive travel services tailored to create your perfect
+            journey.
           </p>
         </motion.div>
 
@@ -128,7 +137,9 @@ const ServicesSection = () => {
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <service.icon className={`w-8 h-8 ${service.color} group-hover:text-primary transition-colors duration-300`} />
+                      <service.icon
+                        className={`w-8 h-8 ${service.color} group-hover:text-primary transition-colors duration-300`}
+                      />
                     </motion.div>
 
                     <h3 className="font-bold text-lg mb-3 group-hover:text-primary transition-colors duration-300">
@@ -167,11 +178,19 @@ const ServicesSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             whileHover={{ scale: 1.02 }}
           >
-            <Link to="/services" className="btn-travel px-8 py-3 rounded-md font-semibold">
+            <Link
+              to="/services"
+              className="btn-travel px-8 py-3 rounded-md font-semibold"
+            >
               View All Services
             </Link>
-            <button 
-              onClick={() => window.open('https://wa.me/1234567890?text=I\'d like to know more about your travel services', '_blank')}
+            <button
+              onClick={() =>
+                window.open(
+                  "https://wa.me/1234567890?text=I'd like to know more about your travel services",
+                  '_blank'
+                )
+              }
               className="btn-sunset px-8 py-3 rounded-md font-semibold"
             >
               Get Free Consultation

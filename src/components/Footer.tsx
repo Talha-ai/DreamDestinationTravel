@@ -27,15 +27,27 @@ const Footer = () => {
     { name: 'Domestic Tours', path: '/services/domestic' },
     { name: 'Educational Tours', path: '/services/educational' },
     { name: 'MICE Tours', path: '/services/mice' },
-    { name: 'B2B Services', path: '/b2b' },
+    // { name: 'B2B Services', path: '/b2b' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    {
+      icon: Facebook,
+      href: 'https://www.facebook.com/DreamDestinationTravelShoppe',
+      label: 'Facebook',
+    },
+    {
+      icon: Instagram,
+      href: 'https://www.instagram.com/dreamdestinationtravels',
+      label: 'Instagram',
+    },
+    // { icon: Twitter, href: '#', label: 'Twitter' },
+    {
+      icon: Youtube,
+      href: 'https://youtube.com/@dreamdestinationtravels?si=c0EezfO2JrSU8wXB',
+      label: 'YouTube',
+    },
   ];
 
   return (
@@ -154,7 +166,7 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 text-secondary" />
                 <span className="text-primary-foreground/80">
-                  +1 (555) 123-4567
+                  9301931222 / 7692931222
                 </span>
               </motion.div>
               <motion.div
@@ -164,7 +176,7 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5 text-secondary" />
                 <span className="text-primary-foreground/80">
-                  info@dreamdestination.com
+                  dream.destination@hotmail.co.in
                 </span>
               </motion.div>
               <motion.div
@@ -174,7 +186,7 @@ const Footer = () => {
               >
                 <MapPin className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Travel Street, Adventure City, AC 12345
+                  132-B Mezzanine Floor Zone-1, M.P. Nagar, Bhopal, Madhya
                 </span>
               </motion.div>
             </div>

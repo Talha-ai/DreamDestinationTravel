@@ -21,52 +21,56 @@ const FeaturedPackages = () => {
   const packages: TourPackage[] = [
     {
       id: 1,
-      title: "European Grand Tour",
-      destination: "Paris, Rome, Amsterdam",
-      duration: "14 Days",
-      groupSize: "12-16 People",
-      rating: 4.9,
-      reviews: 127,
-      image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=300&fit=crop",
-      price: "From $2,999",
-      highlights: ["Expert Guides", "Luxury Hotels", "Cultural Experiences"]
+      title: 'Goa Getaway',
+      destination: 'Goa, India',
+      duration: '4 Days',
+      groupSize: '10-20 People',
+      rating: 4.7,
+      reviews: 85,
+      image:
+        'https://plus.unsplash.com/premium_photo-1697729701846-e34563b06d47?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      price: 'From ₹6,999',
+      highlights: ['Beachside Resorts', 'Water Sports', 'Nightlife Experience'],
     },
     {
       id: 2,
-      title: "Tropical Paradise Escape",
-      destination: "Maldives & Seychelles",
-      duration: "10 Days",
-      groupSize: "8-12 People",
+      title: 'Manali Adventure',
+      destination: 'Manali, Himachal Pradesh',
+      duration: '5 Days',
+      groupSize: '8-15 People',
       rating: 4.8,
-      reviews: 89,
-      image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&h=300&fit=crop",
-      price: "From $3,599",
-      highlights: ["Private Beach", "Water Sports", "Spa Treatments"]
+      reviews: 102,
+      image:
+        'https://images.unsplash.com/photo-1712388430474-ace0c16051e2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      price: 'From ₹8,999',
+      highlights: ['Snow Activities', 'Mountain Views', 'Local Culture'],
     },
     {
       id: 3,
-      title: "Asian Cultural Journey",
-      destination: "Japan, Thailand, Vietnam",
-      duration: "16 Days",
-      groupSize: "10-14 People",
+      title: 'Dubai Luxury Escape',
+      destination: 'Dubai, UAE',
+      duration: '6 Days',
+      groupSize: '12-18 People',
       rating: 4.9,
-      reviews: 156,
-      image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&h=300&fit=crop",
-      price: "From $2,799",
-      highlights: ["Temple Visits", "Local Cuisine", "Cultural Shows"]
+      reviews: 190,
+      image:
+        'https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      price: 'From ₹64,999',
+      highlights: ['Desert Safari', 'Luxury Hotels', 'Shopping Experience'],
     },
     {
       id: 4,
-      title: "African Safari Adventure",
-      destination: "Kenya & Tanzania",
-      duration: "12 Days",
-      groupSize: "6-10 People",
+      title: 'Maldives Paradise Retreat',
+      destination: 'Maldives',
+      duration: '5 Days',
+      groupSize: '6-12 People',
       rating: 4.9,
-      reviews: 203,
-      image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400&h=300&fit=crop",
-      price: "From $4,299",
-      highlights: ["Wildlife Safari", "Luxury Camps", "Conservation Tours"]
-    }
+      reviews: 142,
+      image:
+        'https://images.unsplash.com/photo-1467377791767-c929b5dc9a23?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      price: 'From ₹54,999',
+      highlights: ['Private Villas', 'Snorkeling & Diving', 'Spa & Relaxation'],
+    },
   ];
 
   return (
@@ -83,8 +87,8 @@ const FeaturedPackages = () => {
             Featured <span className="text-gradient-sunset">Tour Packages</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover our most popular destinations and embark on journeys 
-            that will create memories to last a lifetime.
+            Discover our most popular destinations and embark on journeys that
+            will create memories to last a lifetime.
           </p>
         </motion.div>
 
@@ -163,10 +167,17 @@ const FeaturedPackages = () => {
                     </div>
                   </div>
 
-                  <Button 
-                    variant="travel" 
+                  <Button
+                    variant="travel"
                     className="w-full"
-                    onClick={() => window.open('https://wa.me/1234567890?text=I\'m interested in the ' + pkg.title + ' package', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/1234567890?text=I'm interested in the " +
+                          pkg.title +
+                          ' package',
+                        '_blank'
+                      )
+                    }
                   >
                     View Details
                   </Button>
@@ -184,9 +195,7 @@ const FeaturedPackages = () => {
           viewport={{ once: true }}
         >
           <Button variant="sunset" size="lg" asChild>
-            <a href="/services">
-              Explore All Packages
-            </a>
+            <a href="/services">Explore All Packages</a>
           </Button>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Play, ChevronDown, Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import StatsCounter from '@/components/StatsCounter';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
@@ -11,6 +11,8 @@ import heroImage from '@/assets/hero-travel.jpg';
 import herovideo from '../assets/homevideo.mp4';
 
 const HomePage = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   const handleWhatsAppClick = () => {
     window.open(
       "https://wa.me/1234567890?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
@@ -18,8 +20,23 @@ const HomePage = () => {
     );
   };
 
+  const handleDropdownToggle = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleOptionSelect = (type) => {
+    setShowDropdown(false);
+    // Navigate to packages page with filter
+    window.location.href = `/packages?type=${type}`;
+  };
+
+  const handleWatchStory = () => {
+    // Navigate to videos/gallery page
+    window.location.href = '/videos-gallery';
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ cursor: '✈️, auto' }}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -40,7 +57,6 @@ const HomePage = () => {
           <div className="absolute inset-0 hero-gradient" />
           <div className="absolute inset-0 hero-pattern" />
         </div>
-
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
           <motion.div
@@ -76,33 +92,88 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={handleWhatsAppClick}
-                className="group"
-              >
-                Start Your Journey
-                <motion.div
-                  className="ml-2"
-                  whileHover={{ x: 5 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+              {/* Start Your Journey Button with Dropdown */}
+              <div className="relative">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  onClick={handleDropdownToggle}
+                  aria-haspopup="true"
+                  aria-expanded={showDropdown}
+                  className="group flex items-center"
                 >
-                  <ArrowRight className="w-5 h-5" />
-                </motion.div>
-              </Button>
+                  Start Your Journey
+                  <motion.div
+                    className="ml-2"
+                    animate={{ rotate: showDropdown ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown className="w-5 h-5" />
+                  </motion.div>
+                </Button>
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {showDropdown && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                      transition={{ duration: 0.25, ease: 'easeOut' }}
+                      className={`absolute bottom-12 left-1/2 -translate-x-1/2 mt-2 w-72 
+              bg-white/95 backdrop-blur-md rounded-xl 
+              shadow-xl border border-gray-200 
+              overflow-hidden z-[9999]`}
+                      role="menu"
+                    >
+                      <div className="divide-y divide-gray-100">
+                        {/* Option Item */}
+                        <button
+                          onClick={() => handleOptionSelect('international')}
+                          role="menuitem"
+                          className="w-full flex items-center gap-3 px-6 py-4 text-left transition-colors duration-200 hover:bg-primary/10 focus:bg-primary/10 focus:outline-none group"
+                        >
+                          <Globe className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                          <div className="flex flex-col">
+                            <span className="font-semibold text-gray-800">
+                              International Packages
+                            </span>
+                            <span className="text-sm text-gray-600">
+                              Explore worldwide destinations
+                            </span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 ml-auto text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        </button>
+
+                        <button
+                          onClick={() => handleOptionSelect('domestic')}
+                          role="menuitem"
+                          className="w-full flex items-center gap-3 px-6 py-4 text-left transition-colors duration-200 hover:bg-primary/10 focus:bg-primary/10 focus:outline-none group"
+                        >
+                          <MapPin className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                          <div className="flex flex-col">
+                            <span className="font-semibold text-gray-800">
+                              Domestic Packages
+                            </span>
+                            <span className="text-sm text-gray-600">
+                              Discover local hidden gems
+                            </span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 ml-auto text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        </button>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               <Button
                 variant="glass"
                 size="lg"
                 className="group text-white"
-                onClick={() =>
-                  document
-                    .getElementById('featured-packages')
-                    ?.scrollIntoView({ behavior: 'smooth' })
-                }
+                onClick={handleWatchStory}
               >
-                <Play className="w-5 h-5 mr-2 " />
+                <Play className="w-5 h-5 mr-2" />
                 Watch Our Story
               </Button>
             </motion.div>
@@ -134,26 +205,6 @@ const HomePage = () => {
             }}
           />
         </div>
-
-        {/* Scroll Indicator */}
-        {/* <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-        >
-          <motion.div
-            className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex justify-center"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.div
-              className="w-1 h-3 bg-primary-foreground/70 rounded-full mt-2"
-              animate={{ scaleY: [1, 0.5, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </motion.div>
-        </motion.div> */}
       </section>
 
       {/* Stats Counter */}
