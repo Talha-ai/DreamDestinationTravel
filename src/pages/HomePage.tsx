@@ -8,7 +8,7 @@ import FeaturedPackages from '@/components/FeaturedPackages';
 import ServicesSection from '@/components/ServicesSection';
 import CustomerLogos from '@/components/CustomerLogos';
 import heroImage from '@/assets/hero-travel.jpg';
-import herovideo from '../assets/homevideo.mp4';
+import herovideo from '../assets/dreamdestination_herosection.mp4';
 
 const HomePage = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -27,7 +27,7 @@ const HomePage = () => {
   const handleOptionSelect = (type) => {
     setShowDropdown(false);
     // Navigate to packages page with filter
-    window.location.href = `/packages?type=${type}`;
+    window.location.href = `/services/${type}`;
   };
 
   const handleWatchStory = () => {

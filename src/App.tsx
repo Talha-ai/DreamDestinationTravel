@@ -73,14 +73,23 @@ const App = () => {
                   <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
-                    {/*  <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/services/international" element={<InternationalToursPage />} />
-                      <Route path="/services/domestic" element={<DomesticToursPage />} />
-                      <Route path="/services/educational" element={<EducationalToursPage />} />
-                      <Route path="/services/mice" element={<MiceToursPage />} />
-                      <Route path="/reviews" element={<ReviewsPage />} />
-                      <Route path="/b2b" element={<B2BPage />} />*/}
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route
+                      path="/services/international"
+                      element={<InternationalToursPage />}
+                    />
+                    <Route
+                      path="/services/domestic"
+                      element={<DomesticToursPage />}
+                    />
+                    <Route
+                      path="/services/educational"
+                      element={<EducationalToursPage />}
+                    />
+                    <Route path="/services/mice" element={<MiceToursPage />} />
+                    <Route path="/reviews" element={<ReviewsPage />} />
+                    {/*  <Route path="/b2b" element={<B2BPage />} />*/}
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </main>
