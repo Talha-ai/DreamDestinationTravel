@@ -120,7 +120,7 @@ const HomePage = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -8, scale: 0.97 }}
                       transition={{ duration: 0.25, ease: 'easeOut' }}
-                      className={`absolute bottom-12 left-1/4 -translate-x-1/2 mt-2 w-72 
+                      className={`absolute bottom-12 left-1/8 md:left-1/2 -translate-x-1/2 mt-2 w-72 
               bg-white/95 backdrop-blur-md rounded-xl 
               shadow-xl border border-gray-200 
               overflow-hidden z-[9999]`}
