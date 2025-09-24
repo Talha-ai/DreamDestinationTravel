@@ -382,6 +382,7 @@ const CustomCursor = () => {
   const lastPosition = useRef({ x: 0, y: 0 });
   const rafId = useRef<number>();
   const trailCleanupId = useRef<number>();
+  const [isDesktop, setIsDesktop] = useState(true);
 
   // Optimized mouse move handler with throttling
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -470,6 +471,22 @@ const CustomCursor = () => {
       if (trailCleanupId.current) cancelAnimationFrame(trailCleanupId.current);
     };
   }, [handleMouseMove, handleMouseOver, handleMouseOut]);
+
+  useEffect(() => {
+    // Check once on mount
+    const checkDevice = () => {
+      setIsDesktop(window.innerWidth > 768); // show only if larger than tablet size
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => {
+      window.removeEventListener('resize', checkDevice);
+    };
+  }, []);
+
+  if (!isDesktop) return null;
 
   return (
     <>
