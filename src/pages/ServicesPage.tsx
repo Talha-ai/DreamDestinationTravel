@@ -1,7 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Plane, MapPin, GraduationCap, Briefcase } from 'lucide-react';
+import {
+  ArrowRight,
+  Plane,
+  MapPin,
+  GraduationCap,
+  Briefcase,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ServicesSection from '@/components/ServicesSection';
@@ -10,33 +16,41 @@ import servicesHero from '@/assets/services-hero.jpg';
 const ServicesPage = () => {
   const mainServices = [
     {
-      title: "International Tours",
-      description: "Explore exotic destinations across the globe with our expertly crafted international tour packages.",
-      link: "/services/international",
+      title: 'International Tours',
+      description:
+        'Explore exotic destinations across the globe with our expertly crafted international tour packages.',
+      link: '/services/international',
       icon: Plane,
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=300&fit=crop"
+      image:
+        'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=300&fit=crop',
     },
     {
-      title: "Domestic Tours",
-      description: "Discover the hidden gems and cultural treasures within your own country.",
-      link: "/services/domestic",
+      title: 'Domestic Tours',
+      description:
+        'Discover the hidden gems and cultural treasures within your own country.',
+      link: '/services/domestic',
       icon: MapPin,
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
+      image:
+        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop',
     },
     {
-      title: "Educational Tours",
-      description: "Combine learning with adventure through our comprehensive educational travel programs.",
-      link: "/services/educational",
+      title: 'Educational Tours',
+      description:
+        'Combine learning with adventure through our comprehensive educational travel programs.',
+      link: '/services/educational',
       icon: GraduationCap,
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=300&fit=crop"
+      image:
+        'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=300&fit=crop',
     },
     {
-      title: "MICE Tours",
-      description: "Professional corporate travel solutions for meetings, incentives, conferences, and events.",
-      link: "/services/mice",
+      title: 'MICE Tours',
+      description:
+        'Professional corporate travel solutions for meetings, incentives, conferences, and events.',
+      link: '/services/mice',
       icon: Briefcase,
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=300&fit=crop"
-    }
+      image:
+        'https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=300&fit=crop',
+    },
   ];
 
   return (
@@ -62,8 +76,8 @@ const ServicesPage = () => {
               Our <span className="text-gradient-sunset">Services</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-primary-foreground/90">
-              From international adventures to corporate travel solutions, 
-              we offer comprehensive services to make every journey extraordinary.
+              From international adventures to corporate travel solutions, we
+              offer comprehensive services to make every journey extraordinary.
             </p>
           </motion.div>
         </div>
@@ -83,7 +97,8 @@ const ServicesPage = () => {
               Featured <span className="text-gradient-ocean">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover our specialized travel services designed to cater to every type of traveler.
+              Discover our specialized travel services designed to cater to
+              every type of traveler.
             </p>
           </motion.div>
 
@@ -157,31 +172,32 @@ const ServicesPage = () => {
               Ready to Plan Your Perfect Trip?
             </h2>
             <p className="text-xl mb-8 text-secondary-foreground/90 max-w-2xl mx-auto">
-              Our travel experts are standing by to help you create an unforgettable journey 
-              tailored to your preferences and budget.
+              Our travel experts are standing by to help you create an
+              unforgettable journey tailored to your preferences and budget.
             </p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               whileHover={{ scale: 1.02 }}
             >
               <Button
-                variant="secondary"
                 size="lg"
-                onClick={() => window.open('https://wa.me/1234567890?text=I\'d like to discuss my travel plans', '_blank')}
-                className="group"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/1234567890?text=I'd like to discuss my travel plans",
+                    '_blank'
+                  )
+                }
+                className="group bg-gradient-sunset border-2 border-white"
               >
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
-                variant="outline"
                 size="lg"
                 asChild
                 className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
               >
-                <a href="/contact">
-                  Contact Us
-                </a>
+                <a href="/contact">Contact Us</a>
               </Button>
             </motion.div>
           </motion.div>
