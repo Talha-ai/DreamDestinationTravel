@@ -14,46 +14,54 @@ const ContactPage = () => {
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
   });
 
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      color: "text-blue-500"
+      title: 'Phone',
+      details: ['+91 93019 31222', '+91 76929 31222'],
+      color: 'text-blue-500',
     },
     {
       icon: Mail,
-      title: "Email",
-      details: ["info@dreamdestination.com", "support@dreamdestination.com"],
-      color: "text-green-500"
+      title: 'Email',
+      details: ['dream.destination@hotmail.co.in'],
+      color: 'text-green-500',
     },
     {
       icon: MapPin,
-      title: "Address",
-      details: ["123 Travel Street", "Adventure City, AC 12345"],
-      color: "text-red-500"
+      title: 'Address',
+      details: [
+        '132-B Mezzanine Floor Zone-1',
+        'M.P. Nagar, Bhopal, Madhya Pradesh',
+      ],
+      color: 'text-red-500',
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat - Sun: 10:00 AM - 4:00 PM"],
-      color: "text-purple-500"
-    }
+      title: 'Business Hours',
+      details: [
+        'Mon - Fri: 9:00 AM - 6:00 PM',
+        'Sat - Sun: 10:00 AM - 4:00 PM',
+      ],
+      color: 'text-purple-500',
+    },
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Create WhatsApp message
     const message = `Hello! I'm ${formData.name}.
     
@@ -63,11 +71,13 @@ Subject: ${formData.subject}
 
 Message: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
-    
+    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(
+      message
+    )}`;
+
     // Show success toast
     toast({
-      title: "Redirecting to WhatsApp...",
+      title: 'Redirecting to WhatsApp...',
       description: "We'll connect you with our team right away!",
     });
 
@@ -82,7 +92,7 @@ Message: ${formData.message}`;
       email: '',
       phone: '',
       subject: '',
-      message: ''
+      message: '',
     });
   };
 
@@ -100,8 +110,9 @@ Message: ${formData.message}`;
               Get in <span className="text-gradient-sunset">Touch</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-foreground/90">
-              Ready to start planning your next adventure? Our travel experts are here to help 
-              you create the perfect journey tailored to your dreams and budget.
+              Ready to start planning your next adventure? Our travel experts
+              are here to help you create the perfect journey tailored to your
+              dreams and budget.
             </p>
           </motion.div>
         </div>
@@ -124,7 +135,8 @@ Message: ${formData.message}`;
                     Send us a Message
                   </CardTitle>
                   <p className="text-muted-foreground">
-                    Fill out the form below and we'll redirect you to WhatsApp for instant communication.
+                    Fill out the form below and we'll redirect you to WhatsApp
+                    for instant communication.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -132,7 +144,11 @@ Message: ${formData.message}`;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <motion.div
                         whileFocus={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 10,
+                        }}
                       >
                         <Input
                           name="name"
@@ -145,7 +161,11 @@ Message: ${formData.message}`;
                       </motion.div>
                       <motion.div
                         whileFocus={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 10,
+                        }}
                       >
                         <Input
                           name="email"
@@ -162,7 +182,11 @@ Message: ${formData.message}`;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <motion.div
                         whileFocus={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 10,
+                        }}
                       >
                         <Input
                           name="phone"
@@ -174,7 +198,11 @@ Message: ${formData.message}`;
                       </motion.div>
                       <motion.div
                         whileFocus={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 10,
+                        }}
                       >
                         <Input
                           name="subject"
@@ -189,7 +217,11 @@ Message: ${formData.message}`;
 
                     <motion.div
                       whileFocus={{ scale: 1.02 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 300,
+                        damping: 10,
+                      }}
                     >
                       <Textarea
                         name="message"
@@ -211,7 +243,12 @@ Message: ${formData.message}`;
                         variant="travel"
                         size="lg"
                         className="w-full"
-                        disabled={!formData.name || !formData.email || !formData.subject || !formData.message}
+                        disabled={
+                          !formData.name ||
+                          !formData.email ||
+                          !formData.subject ||
+                          !formData.message
+                        }
                       >
                         <Send className="w-5 h-5 mr-2" />
                         Send Message via WhatsApp
@@ -235,8 +272,9 @@ Message: ${formData.message}`;
                   Contact Information
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  We're here to help you plan the perfect trip. Reach out to us through 
-                  any of the channels below, and our travel experts will get back to you promptly.
+                  We're here to help you plan the perfect trip. Reach out to us
+                  through any of the channels below, and our travel experts will
+                  get back to you promptly.
                 </p>
               </div>
 
@@ -266,7 +304,10 @@ Message: ${formData.message}`;
                           </h3>
                           <div className="space-y-1">
                             {info.details.map((detail, idx) => (
-                              <p key={idx} className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                              <p
+                                key={idx}
+                                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+                              >
                                 {detail}
                               </p>
                             ))}
@@ -287,22 +328,30 @@ Message: ${formData.message}`;
                 className="pt-6"
               >
                 <Card className="p-6 bg-gradient-sunset text-secondary-foreground border-0 shadow-travel">
-                  <h3 className="font-bold text-xl mb-4">Need Immediate Assistance?</h3>
+                  <h3 className="font-bold text-xl mb-4">
+                    Need Immediate Assistance?
+                  </h3>
                   <p className="mb-4">
-                    For urgent travel inquiries or last-minute bookings, contact us directly:
+                    For urgent travel inquiries or last-minute bookings, contact
+                    us directly:
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
-                      variant="secondary"
-                      onClick={() => window.open('https://wa.me/1234567890?text=I need immediate assistance with my travel plans', '_blank')}
-                      className="flex-1"
+                      onClick={() =>
+                        window.open(
+                          'https://wa.me/1234567890?text=I need immediate assistance with my travel plans',
+                          '_blank'
+                        )
+                      }
+                      className="flex-1 bg-gradient-sunset border-white border-2"
                     >
                       WhatsApp Now
                     </Button>
                     <Button
-                      variant="outline"
-                      onClick={() => window.location.href = 'tel:+15551234567'}
-                      className="flex-1 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                      onClick={() =>
+                        (window.location.href = 'tel:+15551234567')
+                      }
+                      className="flex-1 bg-gradient-sunset border-secondary-foreground text-secondary-foreground border-white border-2"
                     >
                       Call Now
                     </Button>
@@ -328,7 +377,8 @@ Message: ${formData.message}`;
               Visit Our <span className="text-gradient-ocean">Office</span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              Stop by our office for a personal consultation and trip planning session.
+              Stop by our office for a personal consultation and trip planning
+              session.
             </p>
           </motion.div>
 
@@ -340,7 +390,7 @@ Message: ${formData.message}`;
             className="bg-card rounded-lg shadow-travel overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648750455!2d-73.98731668459394!3d40.75889797932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1635959473214!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6832.770033611447!2d77.4310994479349!3d23.234729539097305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4267c0000001%3A0x36f3115adac48961!2sDream%20Destination%20Travel%20Shoppe!5e0!3m2!1sen!2sin!4v1759238241393!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}

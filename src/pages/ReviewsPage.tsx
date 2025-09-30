@@ -13,71 +13,83 @@ const ReviewsPage = () => {
   const reviews = [
     {
       id: 1,
-      name: "Jessica Williams",
-      location: "California, USA",
+      name: 'Jessica Williams',
+      location: 'California, USA',
       rating: 5,
-      date: "2 weeks ago",
-      review: "Absolutely incredible experience! Dream Destination planned our European honeymoon perfectly. Every detail was taken care of, from luxury accommodations to private tours. The personalized service exceeded our expectations.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=80&h=80&fit=crop&crop=face",
-      verified: true
+      date: '2 weeks ago',
+      review:
+        'Absolutely incredible experience! Dream Destination planned our European honeymoon perfectly. Every detail was taken care of, from luxury accommodations to private tours. The personalized service exceeded our expectations.',
+      image:
+        'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=80&h=80&fit=crop&crop=face',
+      verified: true,
     },
     {
       id: 2,
-      name: "Robert Chen",
-      location: "Toronto, Canada",
+      name: 'Robert Chen',
+      location: 'Toronto, Canada',
       rating: 5,
-      date: "1 month ago",
-      review: "Outstanding service for our family trip to Japan! The cultural experiences were authentic and educational. Our kids are still talking about the temples and traditional ceremonies. Highly professional team!",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
-      verified: true
+      date: '1 month ago',
+      review:
+        'Outstanding service for our family trip to Japan! The cultural experiences were authentic and educational. Our kids are still talking about the temples and traditional ceremonies. Highly professional team!',
+      image:
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
+      verified: true,
     },
     {
       id: 3,
-      name: "Maria Garcia",
-      location: "Barcelona, Spain",
+      name: 'Maria Garcia',
+      location: 'Barcelona, Spain',
       rating: 5,
-      date: "2 months ago",
-      review: "Best travel agency ever! They organized our corporate retreat in Thailand with precision. Everything from team-building activities to business meetings was seamlessly coordinated. Will definitely use again!",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
-      verified: true
+      date: '2 months ago',
+      review:
+        'Best travel agency ever! They organized our corporate retreat in Thailand with precision. Everything from team-building activities to business meetings was seamlessly coordinated. Will definitely use again!',
+      image:
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
+      verified: true,
     },
     {
       id: 4,
-      name: "Ahmed Hassan",
-      location: "Dubai, UAE",
+      name: 'Ahmed Hassan',
+      location: 'Dubai, UAE',
       rating: 5,
-      date: "3 months ago",
-      review: "Exceptional educational tour for our university students! The historical sites, museums, and cultural interactions were perfectly balanced with learning objectives. Professional guides and smooth logistics throughout.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
-      verified: true
+      date: '3 months ago',
+      review:
+        'Exceptional educational tour for our university students! The historical sites, museums, and cultural interactions were perfectly balanced with learning objectives. Professional guides and smooth logistics throughout.',
+      image:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
+      verified: true,
     },
     {
       id: 5,
-      name: "Sophie Laurent",
-      location: "Paris, France",
+      name: 'Sophie Laurent',
+      location: 'Paris, France',
       rating: 5,
-      date: "4 months ago",
-      review: "Magnifique! Our luxury African safari was beyond words. The wildlife encounters, premium accommodations, and expert guides made this a once-in-a-lifetime experience. Every moment was magical!",
-      image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=80&h=80&fit=crop&crop=face",
-      verified: true
+      date: '4 months ago',
+      review:
+        'Magnifique! Our luxury African safari was beyond words. The wildlife encounters, premium accommodations, and expert guides made this a once-in-a-lifetime experience. Every moment was magical!',
+      image:
+        'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=80&h=80&fit=crop&crop=face',
+      verified: true,
     },
     {
       id: 6,
-      name: "John Anderson",
-      location: "Sydney, Australia",
+      name: 'John Anderson',
+      location: 'Sydney, Australia',
       rating: 5,
-      date: "5 months ago",
-      review: "Fantastic domestic tour of hidden Australian gems! They showed us places we never knew existed in our own country. The local guides' knowledge and passion made all the difference. Truly eye-opening!",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face",
-      verified: true
-    }
+      date: '5 months ago',
+      review:
+        "Fantastic domestic tour of hidden Australian gems! They showed us places we never knew existed in our own country. The local guides' knowledge and passion made all the difference. Truly eye-opening!",
+      image:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face',
+      verified: true,
+    },
   ];
 
   const stats = [
-    { value: "4.9", label: "Average Rating", suffix: "/5" },
-    { value: "1,250", label: "Total Reviews", suffix: "+" },
-    { value: "98", label: "Satisfaction Rate", suffix: "%" },
-    { value: "500", label: "5-Star Reviews", suffix: "+" }
+    { value: '4.9', label: 'Average Rating', suffix: '/5' },
+    { value: '1,250', label: 'Total Reviews', suffix: '+' },
+    { value: '98', label: 'Satisfaction Rate', suffix: '%' },
+    { value: '500', label: '5-Star Reviews', suffix: '+' },
   ];
 
   return (
@@ -94,8 +106,8 @@ const ReviewsPage = () => {
               Customer <span className="text-gradient-sunset">Reviews</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-foreground/90">
-              See what our satisfied travelers have to say about their unforgettable 
-              journeys with Dream Destination Travels.
+              See what our satisfied travelers have to say about their
+              unforgettable journeys with Dream Destination Travels.
             </p>
           </motion.div>
         </div>
@@ -115,9 +127,12 @@ const ReviewsPage = () => {
                 viewport={{ once: true }}
               >
                 <div className="text-4xl md:text-5xl font-bold text-gradient-ocean mb-2">
-                  {stat.value}{stat.suffix}
+                  {stat.value}
+                  {stat.suffix}
                 </div>
-                <p className="text-muted-foreground font-medium">{stat.label}</p>
+                <p className="text-muted-foreground font-medium">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -134,11 +149,13 @@ const ReviewsPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold mb-4">
-              Share Your <span className="text-gradient-sunset">Experience</span>
+              Share Your{' '}
+              <span className="text-gradient-sunset">Experience</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Traveled with us? We'd love to hear about your journey! 
-              Your feedback helps us improve and helps other travelers make informed decisions.
+              Traveled with us? We'd love to hear about your journey! Your
+              feedback helps us improve and helps other travelers make informed
+              decisions.
             </p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -157,7 +174,12 @@ const ReviewsPage = () => {
               <Button
                 variant="sunset"
                 size="lg"
-                onClick={() => window.open('https://wa.me/1234567890?text=I\'d like to share my travel experience with you', '_blank')}
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/1234567890?text=I'd like to share my travel experience with you",
+                    '_blank'
+                  )
+                }
                 className="group"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
@@ -207,7 +229,9 @@ const ReviewsPage = () => {
                       />
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg">{review.name}</h3>
-                        <p className="text-sm text-muted-foreground">{review.location}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {review.location}
+                        </p>
                       </div>
                       {review.verified && (
                         <div className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
@@ -219,10 +243,15 @@ const ReviewsPage = () => {
                     <div className="flex items-center mb-3">
                       <div className="flex space-x-1 mr-3">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                          <Star
+                            key={i}
+                            className="w-4 h-4 text-yellow-400 fill-current"
+                          />
                         ))}
                       </div>
-                      <span className="text-sm text-muted-foreground">{review.date}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {review.date}
+                      </span>
                     </div>
 
                     <p className="text-muted-foreground leading-relaxed">

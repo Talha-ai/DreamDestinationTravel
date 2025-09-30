@@ -187,6 +187,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
                   132-B Mezzanine Floor Zone-1, M.P. Nagar, Bhopal, Madhya
+                  Pradesh
                 </span>
               </motion.div>
             </div>
