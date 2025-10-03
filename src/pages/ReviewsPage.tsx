@@ -13,83 +13,87 @@ const ReviewsPage = () => {
   const reviews = [
     {
       id: 1,
-      name: 'Jessica Williams',
-      location: 'California, USA',
+      name: 'Mayank Shah',
+      location: 'India',
       rating: 5,
-      date: '2 weeks ago',
-      review:
-        'Absolutely incredible experience! Dream Destination planned our European honeymoon perfectly. Every detail was taken care of, from luxury accommodations to private tours. The personalized service exceeded our expectations.',
+      date: 'a year ago',
+      review: `Excellent tour organised by Dream Destination Travel Shoppe, very well arranged and satisfied with their services. Recommendable for travel. Best Experience.`,
       image:
-        'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=80&h=80&fit=crop&crop=face',
+        'https://lh3.googleusercontent.com/a/ACg8ocLVmxyu0ZFEDanMtHdK7sAwPIBseIKtBhelUzsWJz0PeB1Uxw=w86-h86-p-rp-mo-ba4-br100',
       verified: true,
     },
     {
       id: 2,
-      name: 'Robert Chen',
-      location: 'Toronto, Canada',
+      name: 'ALOK RAJPUT',
+      location: 'India',
       rating: 5,
-      date: '1 month ago',
-      review:
-        'Outstanding service for our family trip to Japan! The cultural experiences were authentic and educational. Our kids are still talking about the temples and traditional ceremonies. Highly professional team!',
+      date: '10 month ago',
+      review: `It's a very good trip special thanks to dream destination to arrange such a beautiful tour to my parents. The service of dream destination is excellent from booking to till end the tour. The hotels which was booked by them are excellent interms of location,service and food quality. At all points my parents were very comfortable and extremely happy. They know about all the tourist places in the internary planned. Also they keep in touch with local Guide during the entire trip to give better experience. #Dubai trip`,
       image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
+        'https://lh3.googleusercontent.com/a-/ALV-UjVJY3xJ7m2y122D_CIgZIblg4YnXpXpHNVYTN2Z_JVBio4va_4LiQ=w86-h86-p-rp-mo-br100',
       verified: true,
     },
     {
       id: 3,
-      name: 'Maria Garcia',
-      location: 'Barcelona, Spain',
+      name: 'Dhaval Anadkat',
+      location: 'India',
       rating: 5,
-      date: '2 months ago',
-      review:
-        'Best travel agency ever! They organized our corporate retreat in Thailand with precision. Everything from team-building activities to business meetings was seamlessly coordinated. Will definitely use again!',
+      date: '7 months ago',
+      review: `Very good experience with dream destination and specially junedbhai; he has a good guy they manag my full trip..
+I am very happy with their service.`,
       image:
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
+        'https://lh3.googleusercontent.com/a-/ALV-UjWr16UEj7Vw4sYUVd-u--Fs5swLEZ1-Av-PJmoCMEbFIdUJ7A5s=w108-h108-p-rp-mo-br100',
       verified: true,
     },
     {
       id: 4,
-      name: 'Ahmed Hassan',
-      location: 'Dubai, UAE',
+      name: 'Sudipto Mangal',
+      location: 'India',
       rating: 5,
-      date: '3 months ago',
-      review:
-        'Exceptional educational tour for our university students! The historical sites, museums, and cultural interactions were perfectly balanced with learning objectives. Professional guides and smooth logistics throughout.',
+      date: '2 years ago',
+      review: `Excellent service. We have gone for Educational Tour to Hyderabad- 2023 with 41 members. Our experience was awesome. Service provided by the company was excellent.
+`,
       image:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
+        'https://lh3.googleusercontent.com/a/ACg8ocJH8hD6xKCq0guJk2JqtzAvUdfIJy15lOJ-WBvsB7ItUGQTww=w86-h86-p-rp-mo-br100',
       verified: true,
     },
     {
       id: 5,
-      name: 'Sophie Laurent',
-      location: 'Paris, France',
+      name: 'Abhinav Patidar',
+      location: 'India',
       rating: 5,
-      date: '4 months ago',
-      review:
-        'Magnifique! Our luxury African safari was beyond words. The wildlife encounters, premium accommodations, and expert guides made this a once-in-a-lifetime experience. Every moment was magical!',
+      date: '8 months ago',
+      review: `Wonderful 😊 tour is get managed by...
+Our Agent Mr. junned sir.
+
+Thanks for... making this movement memorable and beautiful for our life...
+
+All the arrangements are very good and respectful.
+Thank you so much sir...😊
+I hope we will meet again as soon as possible at new and advanture place...♥️`,
       image:
-        'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=80&h=80&fit=crop&crop=face',
+        'https://lh3.googleusercontent.com/a-/ALV-UjUHNvv80Iv_v-hRKL1zg0cfJ4xMKtLzEgZYotBh-O5qhTrxI_m_=w108-h108-p-rp-mo-br100',
       verified: true,
     },
     {
       id: 6,
-      name: 'John Anderson',
-      location: 'Sydney, Australia',
+      name: 'Uzair khan',
+      location: 'India',
       rating: 5,
-      date: '5 months ago',
-      review:
-        "Fantastic domestic tour of hidden Australian gems! They showed us places we never knew existed in our own country. The local guides' knowledge and passion made all the difference. Truly eye-opening!",
+      date: 'a year ago',
+      review: `Excellent planning of our trip to kashmir by Mr. Junaid. The whole trip was meticulously planned as well as executed without any major hindrance
+Will definitely recommend 👍🏻`,
       image:
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face',
+        'https://lh3.googleusercontent.com/a/ACg8ocJ3DnhUVckCW3aTATyxmbITMXsVT1UMQxGwwgy4EMXAZK-EeA=w86-h86-p-rp-mo-br100',
       verified: true,
     },
   ];
 
   const stats = [
-    { value: '4.9', label: 'Average Rating', suffix: '/5' },
-    { value: '1,250', label: 'Total Reviews', suffix: '+' },
+    { value: '4.7', label: 'Average Rating', suffix: '/5' },
+    { value: '47', label: 'Total Reviews', suffix: '+' },
     { value: '98', label: 'Satisfaction Rate', suffix: '%' },
-    { value: '500', label: '5-Star Reviews', suffix: '+' },
+    { value: '40', label: '5-Star Reviews', suffix: '+' },
   ];
 
   return (

@@ -9,7 +9,9 @@ interface Testimonial {
   location: string;
   rating: number;
   review: string;
+  date: string;
   image: string;
+  verified: boolean;
 }
 
 const TestimonialsCarousel = () => {
@@ -18,41 +20,85 @@ const TestimonialsCarousel = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      location: "New York, USA",
+      name: 'Mayank Shah',
+      location: 'India',
       rating: 5,
-      review: "Dream Destination Travels made our honeymoon absolutely perfect! The attention to detail and personalized service exceeded all our expectations. We visited 3 countries in Europe and every moment was magical.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=100&h=100&fit=crop&crop=face"
+      date: 'a year ago',
+      review: `Excellent tour organised by Dream Destination Travel Shoppe, very well arranged and satisfied with their services. Recommendable for travel. Best Experience.`,
+      image:
+        'https://lh3.googleusercontent.com/a/ACg8ocLVmxyu0ZFEDanMtHdK7sAwPIBseIKtBhelUzsWJz0PeB1Uxw=w86-h86-p-rp-mo-ba4-br100',
+      verified: true,
     },
     {
       id: 2,
-      name: "Michael Chen",
-      location: "Singapore",
+      name: 'ALOK RAJPUT',
+      location: 'India',
       rating: 5,
-      review: "Outstanding service from start to finish! The team helped us plan an incredible family vacation to Japan. Our kids still talk about the cultural experiences and adventures we had. Highly recommended!",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+      date: '10 month ago',
+      review: `It's a very good trip special thanks to dream destination to arrange such a beautiful tour to my parents. The service of dream destination is excellent from booking to till end the tour. The hotels which was booked by them are excellent interms of location,service and food quality. At all points my parents were very comfortable and extremely happy. They know about all the tourist places in the internary planned. Also they keep in touch with local Guide during the entire trip to give better experience. #Dubai trip`,
+      image:
+        'https://lh3.googleusercontent.com/a-/ALV-UjVJY3xJ7m2y122D_CIgZIblg4YnXpXpHNVYTN2Z_JVBio4va_4LiQ=w86-h86-p-rp-mo-br100',
+      verified: true,
     },
     {
       id: 3,
-      name: "Emma Rodriguez",
-      location: "Madrid, Spain",
+      name: 'Dhaval Anadkat',
+      location: 'India',
       rating: 5,
-      review: "The educational tour they organized for our university students was phenomenal. Every detail was carefully planned, from accommodations to learning experiences. Professional and reliable!",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+      date: '7 months ago',
+      review: `Very good experience with dream destination and specially junedbhai; he has a good guy they manag my full trip..
+I am very happy with their service.`,
+      image:
+        'https://lh3.googleusercontent.com/a-/ALV-UjWr16UEj7Vw4sYUVd-u--Fs5swLEZ1-Av-PJmoCMEbFIdUJ7A5s=w108-h108-p-rp-mo-br100',
+      verified: true,
     },
     {
       id: 4,
-      name: "David Thompson",
-      location: "London, UK",
+      name: 'Sudipto Mangal',
+      location: 'India',
       rating: 5,
-      review: "Business trips have never been so well-organized! Their MICE services are top-notch. From conference arrangements to team-building activities, everything was seamless and professional.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
-    }
+      date: '2 years ago',
+      review: `Excellent service. We have gone for Educational Tour to Hyderabad- 2023 with 41 members. Our experience was awesome. Service provided by the company was excellent.
+`,
+      image:
+        'https://lh3.googleusercontent.com/a/ACg8ocJH8hD6xKCq0guJk2JqtzAvUdfIJy15lOJ-WBvsB7ItUGQTww=w86-h86-p-rp-mo-br100',
+      verified: true,
+    },
+    {
+      id: 5,
+      name: 'Abhinav Patidar',
+      location: 'India',
+      rating: 5,
+      date: '8 months ago',
+      review: `Wonderful 😊 tour is get managed by...
+Our Agent Mr. junned sir.
+
+Thanks for... making this movement memorable and beautiful for our life...
+
+All the arrangements are very good and respectful.
+Thank you so much sir...😊
+I hope we will meet again as soon as possible at new and advanture place...♥️`,
+      image:
+        'https://lh3.googleusercontent.com/a-/ALV-UjUHNvv80Iv_v-hRKL1zg0cfJ4xMKtLzEgZYotBh-O5qhTrxI_m_=w108-h108-p-rp-mo-br100',
+      verified: true,
+    },
+    {
+      id: 6,
+      name: 'Uzair khan',
+      location: 'India',
+      rating: 5,
+      date: 'a year ago',
+      review: `Excellent planning of our trip to kashmir by Mr. Junaid. The whole trip was meticulously planned as well as executed without any major hindrance
+Will definitely recommend 👍🏻`,
+      image:
+        'https://lh3.googleusercontent.com/a/ACg8ocJ3DnhUVckCW3aTATyxmbITMXsVT1UMQxGwwgy4EMXAZK-EeA=w86-h86-p-rp-mo-br100',
+      verified: true,
+    },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
@@ -61,11 +107,15 @@ const TestimonialsCarousel = () => {
   }, [testimonials.length]);
 
   const nextTestimonial = () => {
-    setCurrentIndex(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1);
+    setCurrentIndex(
+      currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1
+    );
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1);
+    setCurrentIndex(
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1
+    );
   };
 
   return (
@@ -82,8 +132,8 @@ const TestimonialsCarousel = () => {
             What Our <span className="text-gradient-ocean">Travelers Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it - hear from thousands of satisfied customers
-            who have experienced unforgettable journeys with us.
+            Don't just take our word for it - hear from thousands of satisfied
+            customers who have experienced unforgettable journeys with us.
           </p>
         </motion.div>
 
@@ -103,23 +153,25 @@ const TestimonialsCarousel = () => {
                   alt={testimonials[currentIndex].name}
                   className="w-24 h-24 rounded-full object-cover shadow-lg"
                   whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 />
-                
+
                 <div className="flex-1 text-center md:text-left">
                   <div className="flex justify-center md:justify-start mb-4">
-                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: i * 0.1, duration: 0.3 }}
-                      >
-                        <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      </motion.div>
-                    ))}
+                    {[...Array(testimonials[currentIndex].rating)].map(
+                      (_, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, scale: 0 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: i * 0.1, duration: 0.3 }}
+                        >
+                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                        </motion.div>
+                      )
+                    )}
                   </div>
-                  
+
                   <motion.p
                     className="text-lg text-muted-foreground mb-6 leading-relaxed"
                     initial={{ opacity: 0 }}
@@ -128,7 +180,7 @@ const TestimonialsCarousel = () => {
                   >
                     "{testimonials[currentIndex].review}"
                   </motion.p>
-                  
+
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
