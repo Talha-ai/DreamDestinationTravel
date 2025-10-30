@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const FloatingButtons = () => {
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/1234567890?text=Hello! I'm interested in your travel services.",
+      "https://wa.me/9301931222?text=Hello! I'm interested in your travel services.",
       '_blank'
     );
   };

@@ -187,7 +187,7 @@ const ServicesSection = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://wa.me/1234567890?text=I'd like to know more about your travel services",
+                  "https://wa.me/9301931222?text=I'd like to know more about your travel services",
                   '_blank'
                 )
               }

@@ -234,7 +234,7 @@ const DomesticToursPage = () => {
                     <Button 
                       variant="travel" 
                       className="w-full"
-                      onClick={() => window.open(`https://wa.me/1234567890?text=I'm interested in the ${destination.title} package`, '_blank')}
+                      onClick={() => window.open(`https://wa.me/9301931222?text=I'm interested in the ${destination.title} package`, '_blank')}
                     >
                       Learn More
                     </Button>
@@ -337,7 +337,7 @@ const DomesticToursPage = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                onClick={() => window.open('https://wa.me/1234567890?text=I\'d like to explore domestic tour options', '_blank')}
+                onClick={() => window.open('https://wa.me/9301931222?text=I\'d like to explore domestic tour options', '_blank')}
                 className="group"
               >
                 Plan My Domestic Tour

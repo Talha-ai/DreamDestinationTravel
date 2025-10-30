@@ -1,70 +1,71 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Award, Users, Globe, Heart, Shield, Star } from 'lucide-react';
-import StatsCounter from '@/components/StatsCounter';
-import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-import aboutHero from '@/assets/about-hero.jpg';
+import React from "react";
+import { motion } from "framer-motion";
+import { Award, Users, Globe, Heart, Shield, Star } from "lucide-react";
+import StatsCounter from "@/components/StatsCounter";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const AboutPage = () => {
   const values = [
     {
       icon: Heart,
-      title: 'Passion for Travel',
+      title: "Passion for Travel",
       description:
-        'We live and breathe travel, bringing genuine enthusiasm to every journey we plan.',
+        "We live and breathe travel, bringing genuine enthusiasm to every journey we plan.",
     },
     {
       icon: Shield,
-      title: 'Trust & Reliability',
+      title: "Trust & Reliability",
       description:
         "Your safety and satisfaction are our top priorities. We're here for you 24/7.",
     },
     {
       icon: Star,
-      title: 'Excellence in Service',
+      title: "Value You Can Trust",
       description:
-        'We go above and beyond to deliver exceptional experiences that exceed expectations.',
+        "Compare anywhere, you’ll come back to us for the best deal.",
     },
+
     {
       icon: Globe,
-      title: 'Global Expertise',
+      title: "Global Expertise",
       description:
-        'With partners worldwide, we offer insider knowledge and authentic local experiences.',
+        "With partners worldwide, we offer insider knowledge and authentic local experiences.",
     },
   ];
 
   const team = [
     {
-      name: 'Sarah Mitchell',
-      role: 'Founder & CEO',
+      name: "Sarah Mitchell",
+      role: "Founder & CEO",
       image:
-        'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face',
+        "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face",
       description:
-        'With 15+ years in the travel industry, Sarah founded Dream Destination to make travel accessible and unforgettable for everyone.',
+        "With 15+ years in the travel industry, Sarah founded Dream Destination to make travel accessible and unforgettable for everyone.",
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Head of Operations',
+      name: "Michael Rodriguez",
+      role: "Head of Operations",
       image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face',
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
       description:
-        'Michael ensures every trip runs smoothly with his expertise in logistics and his passion for customer service.',
+        "Michael ensures every trip runs smoothly with his expertise in logistics and his passion for customer service.",
     },
     {
-      name: 'Emily Chen',
-      role: 'Travel Specialist',
+      name: "Emily Chen",
+      role: "Travel Specialist",
       image:
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
       description:
-        'Emily crafts personalized itineraries with her deep knowledge of Asian cultures and destinations.',
+        "Emily crafts personalized itineraries with her deep knowledge of Asian cultures and destinations.",
     },
     {
-      name: 'David Thompson',
-      role: 'Adventure Guide',
+      name: "David Thompson",
+      role: "Adventure Guide",
       image:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
       description:
-        'David leads our adventure tours with his extensive experience in outdoor activities and safety protocols.',
+        "David leads our adventure tours with his extensive experience in outdoor activities and safety protocols.",
     },
   ];
 
@@ -146,10 +147,10 @@ const AboutPage = () => {
               className="grid grid-cols-2 gap-4"
             >
               <div className="space-y-4">
-                <div className="bg-gradient-ocean p-6 rounded-lg text-primary-foreground text-center">
-                  <Award className="w-8 h-8 mx-auto mb-2" />
-                  <h3 className="font-bold text-lg">Award Winning</h3>
-                  <p className="text-sm">Awards if any</p>
+                <div className="bg-primary p-6 rounded-lg text-primary-foreground text-center">
+                  <Heart className="w-8 h-8 mx-auto mb-2" />
+                  <h3 className="font-bold text-lg">Happy Clients</h3>
+                  <p className="text-sm">7500+ Satisfied Travelers</p>
                 </div>
                 <div className="bg-gradient-sunset p-6 rounded-lg text-secondary-foreground text-center">
                   <Users className="w-8 h-8 mx-auto mb-2" />
@@ -163,10 +164,14 @@ const AboutPage = () => {
                   <h3 className="font-bold text-lg">Global Reach</h3>
                   <p className="text-sm">30+ Countries Covered</p>
                 </div>
-                <div className="bg-primary p-6 rounded-lg text-primary-foreground text-center">
-                  <Heart className="w-8 h-8 mx-auto mb-2" />
-                  <h3 className="font-bold text-lg">Happy Clients</h3>
-                  <p className="text-sm">7500+ Satisfied Travelers</p>
+
+                <div className="bg-gradient-ocean p-6 rounded-lg text-primary-foreground text-center">
+                  <Award className="w-8 h-8 mx-auto mb-2" />
+                  <h3 className="font-bold text-lg">FamTrip Experiences</h3>
+                  <p className="text-sm">
+                    Exclusive destination familiarization tours for travel
+                    experts
+                  </p>
                 </div>
               </div>
             </motion.div>

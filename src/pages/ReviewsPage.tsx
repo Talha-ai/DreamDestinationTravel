@@ -180,7 +180,7 @@ Will definitely recommend 👍🏻`,
                 size="lg"
                 onClick={() =>
                   window.open(
-                    "https://wa.me/1234567890?text=I'd like to share my travel experience with you",
+                    "https://wa.me/9301931222?text=I'd like to share my travel experience with you",
                     '_blank'
                   )
                 }

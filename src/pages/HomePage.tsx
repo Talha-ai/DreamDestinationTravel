@@ -15,7 +15,7 @@ const HomePage = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/1234567890?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
+      "https://wa.me/9301931222?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
       '_blank'
     );
   };
@@ -36,7 +36,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ cursor: '✈️, auto' }}>
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}

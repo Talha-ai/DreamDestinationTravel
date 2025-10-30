@@ -166,7 +166,7 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 text-secondary" />
                 <span className="text-primary-foreground/80">
-                  9301931222 / 7692931222
+                  +91 76939 31222
                 </span>
               </motion.div>
               <motion.div

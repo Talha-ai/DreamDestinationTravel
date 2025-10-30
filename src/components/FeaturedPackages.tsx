@@ -24,7 +24,7 @@ const FeaturedPackages = () => {
       title: 'Goa Getaway',
       destination: 'Goa, India',
       duration: '4 Days',
-      groupSize: '10-20 People',
+      groupSize: '2-10 People',
       rating: 4.7,
       reviews: 85,
       image:
@@ -37,7 +37,7 @@ const FeaturedPackages = () => {
       title: 'Manali Adventure',
       destination: 'Manali, Himachal Pradesh',
       duration: '5 Days',
-      groupSize: '8-15 People',
+      groupSize: '2-10 People',
       rating: 4.8,
       reviews: 102,
       image:
@@ -50,7 +50,7 @@ const FeaturedPackages = () => {
       title: 'Dubai Luxury Escape',
       destination: 'Dubai, UAE',
       duration: '6 Days',
-      groupSize: '12-18 People',
+      groupSize: '2-10 People',
       rating: 4.9,
       reviews: 190,
       image:
@@ -63,7 +63,7 @@ const FeaturedPackages = () => {
       title: 'Maldives Paradise Retreat',
       destination: 'Maldives',
       duration: '5 Days',
-      groupSize: '6-12 People',
+      groupSize: '2-10 People',
       rating: 4.9,
       reviews: 142,
       image:
@@ -172,7 +172,7 @@ const FeaturedPackages = () => {
                     className="w-full"
                     onClick={() =>
                       window.open(
-                        "https://wa.me/1234567890?text=I'm interested in the " +
+                        "https://wa.me/9301931222?text=I'm interested in the " +
                           pkg.title +
                           ' package',
                         '_blank'

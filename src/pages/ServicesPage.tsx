@@ -183,7 +183,7 @@ const ServicesPage = () => {
                 size="lg"
                 onClick={() =>
                   window.open(
-                    "https://wa.me/1234567890?text=I'd like to discuss my travel plans",
+                    "https://wa.me/9301931222?text=I'd like to discuss my travel plans",
                     '_blank'
                   )
                 }

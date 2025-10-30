@@ -21,7 +21,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 93019 31222', '+91 76929 31222'],
+      details: ['+91 93019 31222'],
       color: 'text-blue-500',
     },
     {
@@ -43,8 +43,7 @@ const ContactPage = () => {
       icon: Clock,
       title: 'Business Hours',
       details: [
-        'Mon - Fri: 9:00 AM - 6:00 PM',
-        'Sat - Sun: 10:00 AM - 4:00 PM',
+        'Mon - Sat: 10:30 AM - 8:00 PM'
       ],
       color: 'text-purple-500',
     },
@@ -71,7 +70,7 @@ Subject: ${formData.subject}
 
 Message: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/9301931222?text=${encodeURIComponent(
       message
     )}`;
 
@@ -339,7 +338,7 @@ Message: ${formData.message}`;
                     <Button
                       onClick={() =>
                         window.open(
-                          'https://wa.me/1234567890?text=I need immediate assistance with my travel plans',
+                          'https://wa.me/9301931222?text=I need immediate assistance with my travel plans',
                           '_blank'
                         )
                       }
