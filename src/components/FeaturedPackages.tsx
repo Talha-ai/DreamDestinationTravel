@@ -172,7 +172,7 @@ const FeaturedPackages = () => {
                     className="w-full"
                     onClick={() =>
                       window.open(
-                        "https://wa.me/9301931222?text=I'm interested in the " +
+                        "https://wa.me/7683931222?text=I'm interested in the " +
                           pkg.title +
                           ' package',
                         '_blank'

@@ -93,7 +93,7 @@ Business Type: ${formData.businessType}
 
 Message: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/9301931222?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/7683931222?text=${encodeURIComponent(message)}`;
     
     toast({
       title: "Redirecting to WhatsApp...",
@@ -385,7 +385,7 @@ Message: ${formData.message}`;
               <Button
                 variant="secondary"
                 size="lg"
-                onClick={() => window.open('https://wa.me/9301931222?text=I\'m interested in B2B partnership opportunities', '_blank')}
+                onClick={() => window.open('https://wa.me/7683931222?text=I\'m interested in B2B partnership opportunities', '_blank')}
                 className="group"
               >
                 <Briefcase className="w-5 h-5 mr-2" />

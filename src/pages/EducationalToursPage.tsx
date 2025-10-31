@@ -286,7 +286,7 @@ const EducationalToursPage = () => {
                     <Button 
                       variant="travel" 
                       className="w-full"
-                      onClick={() => window.open(`https://wa.me/9301931222?text=I'm interested in the ${program.title} educational tour`, '_blank')}
+                      onClick={() => window.open(`https://wa.me/7683931222?text=I'm interested in the ${program.title} educational tour`, '_blank')}
                     >
                       Request Information
                     </Button>
@@ -383,7 +383,7 @@ const EducationalToursPage = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                onClick={() => window.open('https://wa.me/9301931222?text=I\'d like to discuss educational tour options for my school', '_blank')}
+                onClick={() => window.open('https://wa.me/7683931222?text=I\'d like to discuss educational tour options for my school', '_blank')}
                 className="group"
               >
                 Plan Educational Tour

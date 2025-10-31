@@ -15,7 +15,7 @@ const HomePage = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/9301931222?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
+      "https://wa.me/7683931222?text=Hello! I'm interested in planning my next adventure with Dream Destination Travels.",
       '_blank'
     );
   };

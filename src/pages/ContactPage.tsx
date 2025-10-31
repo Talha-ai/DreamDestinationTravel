@@ -70,7 +70,7 @@ Subject: ${formData.subject}
 
 Message: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/9301931222?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/7683931222?text=${encodeURIComponent(
       message
     )}`;
 
@@ -338,7 +338,7 @@ Message: ${formData.message}`;
                     <Button
                       onClick={() =>
                         window.open(
-                          'https://wa.me/9301931222?text=I need immediate assistance with my travel plans',
+                          'https://wa.me/7683931222?text=I need immediate assistance with my travel plans',
                           '_blank'
                         )
                       }
