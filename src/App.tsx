@@ -66,11 +66,11 @@ const App = () => {
                 <LoadingScreen key="loading" />
               ) : ( */}
               <>
-                <Navbar />
+                {/* <Navbar /> */}
                 <main>
                   <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
+                    {/* <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route
@@ -86,12 +86,12 @@ const App = () => {
                       element={<EducationalToursPage />}
                     />
                     <Route path="/services/mice" element={<MiceToursPage />} />
-                    <Route path="/reviews" element={<ReviewsPage />} />
+                    <Route path="/reviews" element={<ReviewsPage />} /> */}
                     {/*  <Route path="/b2b" element={<B2BPage />} />*/}
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </main>
-                <Footer />
+                {/* <Footer /> */}
                 <FloatingButtons />
               </>
               {/* )} */}
